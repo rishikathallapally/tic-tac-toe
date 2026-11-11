@@ -26,9 +26,10 @@ A simple two-player Tic-Tac-Toe game built using HTML, CSS, and JavaScript.
 2. Open the project folder.
 3. Open `index.html` in your browser.
 
-## Live Demo
+## Live Demo 
 
-Coming soon!
+[Click Here](https://rishikathallapally.github.io/tic-tac-toe/)
+
 
 ## Author
 
