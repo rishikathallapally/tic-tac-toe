@@ -1,0 +1,172 @@
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #F5F1E8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main Container */
+.game-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* Header */
+.game-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.game-header h1 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #34312C;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.game-header p {
+    color: #898278;
+    font-size: 14px;
+}
+
+/* Game Card */
+.game-card {
+    background: #FFFCF6;
+    padding: 30px;
+    border: 1px solid #E9E1D4;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(80, 65, 40, 0.06);
+}
+
+/* Game Status */
+.status {
+    background: #F1EDE3;
+    padding: 14px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.status p {
+    color: #62594D;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Game Board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.cell {
+    aspect-ratio: 1;
+    border: 1px solid #E5DCCD;
+    border-radius: 12px;
+    background: #FFFFFF;
+    font-size: 42px;
+    font-weight: 800;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.cell:hover:not(:disabled) {
+    background: #F7F3EA;
+    border-color: #B8AA96;
+}
+
+/* Player Colors */
+.cell.x {
+    color: #567C69;
+}
+
+.cell.o {
+    color: #C47761;
+}
+
+.cell:disabled {
+    cursor: not-allowed;
+}
+
+/* Restart Button */
+#restart-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: #567C69;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#restart-btn:hover {
+    background: #426653;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 22px;
+    color: #958C80;
+    font-size: 12px;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+
+    .game-card {
+        padding: 22px;
+    }
+
+    .game-header h1 {
+        font-size: 29px;
+    }
+
+    .cell {
+        font-size: 36px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+    .game-card {
+        padding: 16px;
+    }
+
+    .game-board {
+        gap: 8px;
+    }
+
+    .cell {
+        font-size: 30px;
+    }
+
+    #restart-btn {
+        padding: 12px;
+    }
+}
